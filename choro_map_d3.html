@@ -68,8 +68,11 @@ var x = d3.scaleLinear()
     .rangeRound([600, 860]);
 
 var color = d3.scaleThreshold()
-    .domain(d3.range(2.6, 75.1, (75.1-2.6)/8))
-    .range(['blue', 'beige', 'salmon']);
+    .domain([2, 15, 30, 45, 60])
+    .range(["#f2f0f7", "#dadaeb", "#bcbddc", "#9e9ac8", "#756bb1", "#54278f"]);
+
+    /*.domain(d3.range(2.6, 75.1, (75.1-2.6)/8))
+    .range(['blue', 'beige', 'salmon']);*/
 
 var g = svg.append("g")
     .attr("class", "key")
